@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The End of Electronics</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    function switchLanguage(lang) {
+      const enElems = document.querySelectorAll('.en');
+      const ruElems = document.querySelectorAll('.ru');
+
+      if(lang === 'en') {
+        enElems.forEach(e => e.style.display = 'block');
+        ruElems.forEach(e => e.style.display = 'none');
+      } else {
+        enElems.forEach(e => e.style.display = 'none');
+        ruElems.forEach(e => e.style.display = 'block');
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Botones de idioma -->
+  <div class="lang-switch">
+    <button onclick="switchLanguage('en')">English</button>
+    <button onclick="switchLanguage('ru')">Русский</button>
+  </div>
+
+  <!-- Biografía de la banda -->
+  <div class="en">
+    <h1>The End of Electronics</h1>
+    <p>Russian post-punk/coldwave solo project created by Nikita Skarletov in Ryazan (2017–2021). 
+    The project blends melancholy melodies, deep vocals, and minimalistic electronic instrumentation, 
+    evoking the post-Soviet atmosphere of nostalgia and introspection.</p>
+  </div>
+
+  <div class="ru" style="display:none;">
+    <h1>Конец Электроники</h1>
+    <p>Российский сольный проект в жанре пост-панк/колдвейв, созданный Никитой Скарлетовым в Рязани (2017–2021). 
+    Проект сочетает меланхоличные мелодии, глубокий вокал и минималистичную электронную инструментовку, 
+    вызывая атмосферу постсоветской ностальгии и интроспекции.</p>
+  </div>
+
+  <!-- Álbum: Safety Guidelines -->
+  <div class="album en">
+    <h2>Safety Guidelines (Техника Безопасности) – 2020</h2>
+    <p>Latest full-length album by The End of Electronics, featuring a mix of post-punk and coldwave tracks.</p>
+
+    <ul>
+        <li>Citizen</li>
+        <li>Doppelganger</li>
+        <li>Decadence</li>
+        <li>Proletarian Gothic</li>
+        <li>Goddess of Underground</li>
+        <li>Ritual</li>
+        <li>Safety Guidelines</li>
+        <li>Igroteka</li>
+        <li>Radiowave</li>
+      </ul>
+      
+
+    <h3>Your Review:</h3>
+    <form action="/addReview" method="post">
+      <label>Album Rating (1-5): </label>
+      <input type="number" name="albumRating" min="1" max="5" required><br><br>
+      
+      <label>Album Comment:</label><br>
+      <textarea name="albumComment" placeholder="Write your opinion here"></textarea><br><br>
+      
+      <h4>Song Ratings:</h4>
+      <label>Citizen:</label>
+      <input type="number" name="Night" min="1" max="5"><br>
+      <label>Doppelganger:</label>
+      <input type="number" name="Union" min="1" max="5"><br>
+      <label>Decadence:</label>
+      <input type="number" name="Photographs" min="1" max="5"><br>
+      <label>Proletarian Gothic:</label>
+      <input type="number" name="VideoRecorder" min="1" max="5"><br>
+      <label>Goddess of Underground:</label>
+      <input type="number" name="FlowersSweets" min="1" max="5"><br><br>
+      <label>Ritual:</label>
+      <input type="number" name="Night" min="1" max="5"><br>
+      <label>Safety Guidelines:</label>
+      <input type="number" name="Night" min="1" max="5"><br>
+      <label>Igroteka:</label>
+      <input type="number" name="Night" min="1" max="5"><br>
+      <label>Radiowave:</label>
+      <input type="number" name="Night" min="1" max="5"><br>
+  
+      <button type="submit">Submit Review</button>
+    </form>
+  </div>
+
+  <div class="album ru" style="display:none;">
+    <h2>Техника Безопасности (Safety Guidelines) – 2020</h2>
+    <p>Последний полноформатный альбом Конца Электроники, сочетающий пост-панк и колдвейв стили.</p>
+
+    <ul>
+        <li>Citizen</li>
+        <li>Doppelganger</li>
+        <li>Decadence</li>
+        <li>Proletarian Gothic</li>
+        <li>Goddess of Underground</li>
+        <li>Ritual</li>
+        <li>Safety Guidelines</li>
+        <li>Igroteka</li>
+        <li>Radiowave</li>
+      </ul>
+
+    <h3>Ваш отзыв:</h3>
+    <form action="/addReview" method="post">
+      <label>Оценка альбома (1-5): </label>
+      <input type="number" name="albumRating" min="1" max="5" required><br><br>
+      
+      <label>Комментарий об альбоме:</label><br>
+      <textarea name="albumComment" placeholder="Напишите своё мнение здесь"></textarea><br><br>
+      
+      <h4>Оценки песен:</h4>
+      <label>Citizen:</label>
+      <input type="number" name="Night" min="1" max="5"><br>
+      <label>Doppelganger:</label>
+      <input type="number" name="Union" min="1" max="5"><br>
+      <label>Decadence:</label>
+      <input type="number" name="Photographs" min="1" max="5"><br>
+      <label>Proletarian Gothic:</label>
+      <input type="number" name="VideoRecorder" min="1" max="5"><br>
+      <label>Goddess of Underground:</label>
+      <input type="number" name="FlowersSweets" min="1" max="5"><br><br>
+      <label>Ritual:</label>
+      <input type="number" name="Night" min="1" max="5"><br>
+      <label>Safety Guidelines:</label>
+      <input type="number" name="Night" min="1" max="5"><br>
+      <label>Igroteka:</label>
+      <input type="number" name="Night" min="1" max="5"><br>
+      <label>Radiowave:</label>
+      <input type="number" name="Night" min="1" max="5"><br>
+  
+      <button type="submit">Отправить отзыв</button>
+    </form>
+  </div>
+
+  <!-- Álbum: Voskhod -->
+  <div class="album en">
+    <h2>Voskhod – 2021</h2>
+    <p>Mini-album featuring a mix of post-punk and coldwave styles.</p>
+    <ul>
+      <li>The Rise</li>
+      <li>Ring</li>
+      <li>Fire</li>
+      <li>Speed</li>
+      <li>Film</li>
+      <li>Cosmonaut</li>
+    </ul>
+
+    <h3>Your Review:</h3>
+    <form action="/addReview" method="post">
+      <label>Album Rating (1-5): </label>
+      <input type="number" name="albumRating" min="1" max="5" required><br><br>
+      
+      <label>Album Comment:</label><br>
+      <textarea name="albumComment" placeholder="Write your opinion here"></textarea><br><br>
+      
+      <h4>Song Ratings:</h4>
+      <label>The Rise:</label>
+      <input type="number" name="Cosmonaut" min="1" max="5"><br>
+      <label>Ring:</label>
+      <input type="number" name="Morning" min="1" max="5"><br>
+      <label>Fire:</label>
+      <input type="number" name="Sunrise" min="1" max="5"><br><br>
+      <label>Speed:</label>
+      <input type="number" name="Cosmonaut" min="1" max="5"><br>
+      <label>Film:</label>
+      <input type="number" name="Morning" min="1" max="5"><br>
+      <label>Cosmonaut:</label>
+      <input type="number" name="Sunrise" min="1" max="5"><br><br>
+  
+
+      <button type="submit">Submit Review</button>
+    </form>
+  </div>
+
+
+<!-- Álbum: The End of Electronics -->
+<div class="album en">
+    <h2>The End of Electronics – 2022</h2>
+    <p>First full-length album by The End of Electronics, recorded in Ryazan, Russia.</p>
+  
+    <ul>
+      <li>Night</li>
+      <li>Union</li>
+      <li>Photographs</li>
+      <li>Aurora</li>
+      <li>Romantic - Flowers and Sweet</li>
+      <li>Video Recorder</li>
+      <li>Public Transport</li>
+      <li>Electric Energy</li>
+    </ul>
+  
+    <h3>Your Review:</h3>
+    <form action="/addReview" method="post">
+      <label>Album Rating (1-5): </label>
+      <input type="number" name="albumRating" min="1" max="5" required><br><br>
+      
+      <label>Album Comment:</label><br>
+      <textarea name="albumComment" placeholder="Write your opinion here"></textarea><br><br>
+      
+      <h4>Song Ratings:</h4>
+      <label>Night:</label>
+      <input type="number" name="Night" min="1" max="5"><br>
+      <label>Union:</label>
+      <input type="number" name="Union" min="1" max="5"><br>
+      <label>Photographs:</label>
+      <input type="number" name="Photographs" min="1" max="5"><br>
+      <label>Aurora:</label>
+      <input type="number" name="Aurora" min="1" max="5"><br>
+      <label>Romantic - Flowers and Sweet:</label>
+      <input type="number" name="RomanticFlowersSweet" min="1" max="5"><br>
+      <label>Video Recorder:</label>
+      <input type="number" name="VideoRecorder" min="1" max="5"><br>
+      <label>Public Transport:</label>
+      <input type="number" name="PublicTransport" min="1" max="5"><br>
+      <label>Electric Energy:</label>
+      <input type="number" name="ElectricEnergy" min="1" max="5"><br><br>
+  
+      <button type="submit">Submit Review</button>
+    </form>
+  </div>
+  
+  <div class="album ru" style="display:none;">
+    <h2>Конец Электроники (The End of Electronics) – 2022</h2>
+    <p>Первый полноформатный альбом Конца Электроники, записанный в Рязани, Россия.</p>
+  
+    <ul>
+      <li>Night</li>
+      <li>Union</li>
+      <li>Photographs</li>
+      <li>Aurora</li>
+      <li>Romantic - Flowers and Sweet</li>
+      <li>Video Recorder</li>
+      <li>Public Transport</li>
+      <li>Electric Energy</li>
+    </ul>
+  
+    <h3>Ваш отзыв:</h3>
+    <form action="/addReview" method="post">
+      <label>Оценка альбома (1-5): </label>
+      <input type="number" name="albumRating" min="1" max="5" required><br><br>
+      
+      <label>Комментарий об альбоме:</label><br>
+      <textarea name="albumComment" placeholder="Напишите своё мнение здесь"></textarea><br><br>
+      
+      <h4>Оценки песен:</h4>
+      <label>Night:</label>
+      <input type="number" name="Night" min="1" max="5"><br>
+      <label>Union:</label>
+      <input type="number" name="Union" min="1" max="5"><br>
+      <label>Photographs:</label>
+      <input type="number" name="Photographs" min="1" max="5"><br>
+      <label>Aurora:</label>
+      <input type="number" name="Aurora" min="1" max="5"><br>
+      <label>Romantic - Flowers and Sweet:</label>
+      <input type="number" name="RomanticFlowersSweet" min="1" max="5"><br>
+      <label>Video Recorder:</label>
+      <input type="number" name="VideoRecorder" min="1" max="5"><br>
+      <label>Public Transport:</label>
+      <input type="number" name="PublicTransport" min="1" max="5"><br>
+      <label>Electric Energy:</label>
+      <input type="number" name="ElectricEnergy" min="1" max="5"><br><br>
+  
+      <button type="submit">Отправить отзыв</button>
+    </form>
+  </div>
+  
+
+  <!-- Comentarios del álbum -->
+<div id="reviews-container">
+    <h3>Reviews:</h3>
+    <ul id="reviews-list"></ul>
+  </div>
+  
+
+  <div class="album ru" style="display:none;">
+    <h2>Восход (Voskhod) – 2021</h2>
+    <p>Мини-альбом, сочетающий пост-панк и колдвейв стили.</p>
+
+    <ul>
+        <li>The Rise</li>
+        <li>Ring</li>
+        <li>Fire</li>
+        <li>Speed</li>
+        <li>Film</li>
+        <li>Cosmonaut</li>
+      </ul>
+
+    <h3>Ваш отзыв:</h3>
+    <form action="/addReview" method="post">
+      <label>Оценка альбома (1-5): </label>
+      <input type="number" name="albumRating" min="1" max="5" required><br><br>
+      
+      <label>Комментарий об альбоме:</label><br>
+      <textarea name="albumComment" placeholder="Напишите своё мнение здесь"></textarea><br><br>
+      
+      <h4>Оценки песен:</h4>
+      <label>The Rise:</label>
+      <input type="number" name="Cosmonaut" min="1" max="5"><br>
+      <label>Ring:</label>
+      <input type="number" name="Morning" min="1" max="5"><br>
+      <label>Fire:</label>
+      <input type="number" name="Sunrise" min="1" max="5"><br><br>
+      <label>Speed:</label>
+      <input type="number" name="Cosmonaut" min="1" max="5"><br>
+      <label>Film:</label>
+      <input type="number" name="Morning" min="1" max="5"><br>
+      <label>Cosmonaut:</label>
+      <input type="number" name="Sunrise" min="1" max="5"><br><br>
+      <button type="submit">Отправить отзыв</button>
+    </form>
+  </div>
+
+  <div id="all-reviews">
+    <h3>Reseñas anteriores:</h3>
+    <ul id="reviews-list"></ul>
+  </div>
+  
+  <script>
+  async function loadReviews() {
+    const res = await fetch('/reviews');
+    const reviews = await res.json();
+    const list = document.getElementById('reviews-list');
+    list.innerHTML = '';
+    reviews.forEach(r => {
+      const li = document.createElement('li');
+      li.innerHTML = `<strong>Album Rating:</strong> ${r.albumRating} <br>
+                      <strong>Comment:</strong> ${r.albumComment} <br>
+                      ${Object.keys(r).filter(k => k !== 'albumRating' && k !== 'albumComment')
+                        .map(song => `<strong>${song}:</strong> ${r[song]}`).join('<br>')}`;
+      list.appendChild(li);
+    });
+  }
+  
+  loadReviews();
+  </script>
+
+<div class="reviews-container" id="reviews"></div>
+
+
+
+</body>
+</html>
+
