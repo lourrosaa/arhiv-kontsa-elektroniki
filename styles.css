@@ -1,4 +1,4 @@
-/* Estilo general del cuerpo */
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #111;
@@ -7,7 +7,7 @@ body {
     padding: 0;
   }
   
-  /* Botones de cambio de idioma */
+
   .lang-switch {
     text-align: center;
     padding: 20px 0;
@@ -30,7 +30,7 @@ body {
     background-color: #ff0040;
   }
   
-  /* Encabezados */
+
   h1, h2, h3, h4 {
     text-align: center;
     margin: 20px 0;
@@ -52,7 +52,7 @@ body {
     color: #ff99cc;
   }
   
-  /* Listas de canciones */
+
   ul {
     list-style-type: none;
     padding: 0;
@@ -64,7 +64,7 @@ body {
     font-size: 16px;
   }
   
-  /* Formulario de reseñas */
+
   form {
     background-color: #222;
     padding: 15px;
@@ -114,12 +114,12 @@ body {
     background-color: #ff3366;
   }
   
-  /* Contenedores de álbum */
+
   .album {
     margin: 40px 0;
   }
 
-  /* Estilo para mostrar reviews */
+
 .reviews-container {
     background-color: #222;
     color: #eee;
