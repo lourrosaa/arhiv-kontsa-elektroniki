@@ -62,6 +62,8 @@
 
     <h3>Your Review:</h3>
     <form action="/addReview" method="post">
+      <label>Your Name:</label>
+      <input type="text" name="username" required><br><br>
       <label>Album Rating (1-5): </label>
       <input type="number" name="albumRating" min="1" max="5" required><br><br>
       
@@ -110,6 +112,8 @@
 
     <h3>Ваш отзыв:</h3>
     <form action="/addReview" method="post">
+      <label>Ваше имя:</label>
+      <input type="text" name="username" required><br><br>
       <label>Оценка альбома (1-5): </label>
       <input type="number" name="albumRating" min="1" max="5" required><br><br>
       
