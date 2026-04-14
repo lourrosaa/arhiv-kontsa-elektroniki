@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Servir archivos estáticos (HTML, CSS, JS)
-app.use(express.static(path.join(__dirname, '..'))); // ajusta según dónde esté tu HTML
+app.use(express.static(__dirname));
 
 const reviewsFile = path.join(__dirname, 'reviews.json');
 
@@ -26,31 +26,19 @@ app.post('/addReview', (req, res) => {
 
   // Leer reseñas existentes
   const reviews = JSON.parse(fs.readFileSync(reviewsFile));
-  
-  // Agregar la nueva reseña
+
   reviews.push(newReview);
 
-  // Guardar en archivo
   fs.writeFileSync(reviewsFile, JSON.stringify(reviews, null, 2));
 
-  // Respuesta al usuario
-  res.send(`
-    <h2>¡Gracias por tu reseña!</h2>
-    <a href="/">Volver a la página</a>
-    <h3>Reseñas guardadas:</h3>
-    <pre>${JSON.stringify(reviews, null, 2)}</pre>
-  `);
+  res.redirect('/');
 });
 
-// Ruta para mostrar todas las reseñas en formato JSON
 app.get('/reviews', (req, res) => {
   const reviews = JSON.parse(fs.readFileSync(reviewsFile));
   res.json(reviews);
 });
 
-// Iniciar servidor
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+  console.log(`Servidor corriendo en puerto ${PORT}`);
 });
-
-app.use(express.static(path.join(__dirname, 'web')));
